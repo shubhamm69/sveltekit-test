@@ -17,8 +17,8 @@
 
   let contact: Contact | undefined;
 
-  onMount(() => {
-    const contacts: Contact[] = getContacts();
+  onMount(async () => {
+    const contacts: Contact[] = await getContacts();
     contact = contacts.find((c) => c.id === contactId);
   });
 </script>

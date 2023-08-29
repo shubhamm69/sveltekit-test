@@ -7,19 +7,24 @@
     country: string;
     phone: number;
   }
-  import { Link } from 'svelte-routing';
+  import { Link } from "svelte-routing";
   export let contact: Contact;
+  const redirectToDetails = () => {
+    // Pass the contact ID as a parameter
+    window.location.href = `/details/${contact.id}`;
+  };
 </script>
 
-<Link to={`/details/${contact.id}`}>
-  <div class="card">
-    <h3>{contact.name}</h3>
-    <p>{contact.country}</p>
-  </div>
-</Link>
+<!-- <div class="card" on:click={redirectToDetails}> -->
+<div class="card">
+  <h3>{contact.name}</h3>
+  <p>{contact.country}</p>
+  <p>Phone: {contact.phone}</p>
+</div>
 
 <style>
   .card {
+    cursor: pointer;
     margin: 10px;
     padding: 15px;
     border: 1px solid #ccc;
