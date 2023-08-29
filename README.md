@@ -1,47 +1,41 @@
-# Svelte + TS + Vite
 
-This template should help get you started developing with Svelte and TypeScript in Vite.
+# Contacts Display Page
 
-## Recommended IDE Setup
+This project features a "Contacts Display" page that fetches data from the provided API and presents it in a user-friendly format. The project is hosted on StackBlitz, and you can access it using the following link: [StackBlitz Link](https://stackblitz.com/edit/sveltekit-test-23m2oe?file=src%2FApp.svelte).
 
-[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode).
+## Features
 
-## Need an official Svelte framework?
+- The page fetches data from the API: [https://rishabh-test-api.vercel.app/api/contact](https://rishabh-test-api.vercel.app/api/contact).
+- Data is locally stored to prevent unnecessary refetching.
+- A search field allows users to search for contacts using various fields, except for ID and phone number.
+- Only matching contacts are displayed on the screen after a search.
+- If no search data is provided, no contacts are displayed.
+- The ID is hidden, and all other contact data from the API is presented.
+- Efforts have been made to make the data visually presentable.
+- CRUD operations functions have been added to `storage.ts`, though they have not been fully implemented due to time constraints.
 
-Check out [SvelteKit](https://github.com/sveltejs/kit#readme), which is also powered by Vite. Deploy anywhere with its serverless-first approach and adapt to various platforms, with out of the box support for TypeScript, SCSS, and Less, and easily-added support for mdsvex, GraphQL, PostCSS, Tailwind CSS, and more.
+## Getting Started
 
-## Technical considerations
+1. Clone or download this repository.
+2. Navigate to the project folder and install dependencies using either npm or pnpm:
+   ```
+   npm install
+   ```
+   or
+   ```
+   pnpm install
+   ```
+3. Run the development server:
+   ```
+   npm run dev
+   ```
+   or
+   ```
+   pnpm run dev
+   ```
+4. Access the app through your browser at the provided local server address.
 
-**Why use this over SvelteKit?**
+Feel free to explore the code and the implemented features. If you have any questions or feedback, please don't hesitate to reach out.
 
-- It brings its own routing solution which might not be preferable for some users.
-- It is first and foremost a framework that just happens to use Vite under the hood, not a Vite app.
-
-This template contains as little as possible to get started with Vite + TypeScript + Svelte, while taking into account the developer experience with regards to HMR and intellisense. It demonstrates capabilities on par with the other `create-vite` templates and is a good starting point for beginners dipping their toes into a Vite + Svelte project.
-
-Should you later need the extended capabilities and extensibility provided by SvelteKit, the template has been structured similarly to SvelteKit so that it is easy to migrate.
-
-**Why `global.d.ts` instead of `compilerOptions.types` inside `jsconfig.json` or `tsconfig.json`?**
-
-Setting `compilerOptions.types` shuts out all other types not explicitly listed in the configuration. Using triple-slash references keeps the default TypeScript setting of accepting type information from the entire workspace, while also adding `svelte` and `vite/client` type information.
-
-**Why include `.vscode/extensions.json`?**
-
-Other templates indirectly recommend extensions via the README, but this file allows VS Code to prompt the user to install the recommended extension upon opening the project.
-
-**Why enable `allowJs` in the TS template?**
-
-While `allowJs: false` would indeed prevent the use of `.js` files in the project, it does not prevent the use of JavaScript syntax in `.svelte` files. In addition, it would force `checkJs: false`, bringing the worst of both worlds: not being able to guarantee the entire codebase is TypeScript, and also having worse typechecking for the existing JavaScript. In addition, there are valid use cases in which a mixed codebase may be relevant.
-
-**Why is HMR not preserving my local component state?**
-
-HMR state preservation comes with a number of gotchas! It has been disabled by default in both `svelte-hmr` and `@sveltejs/vite-plugin-svelte` due to its often surprising behavior. You can read the details [here](https://github.com/rixo/svelte-hmr#svelte-hmr).
-
-If you have state that's important to retain within a component, consider creating an external store which would not be replaced by HMR.
-
-```ts
-// store.ts
-// An extremely simple external store
-import { writable } from 'svelte/store'
-export default writable(0)
-```
+Best regards,  
+Shubham Singh
