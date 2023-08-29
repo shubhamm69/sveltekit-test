@@ -1,7 +1,7 @@
 
 # Contacts Display Page
 
-This project features a "Contacts Display" page that fetches data from the provided API and presents it in a user-friendly format. The project is hosted on StackBlitz, and you can access it using the following link: [StackBlitz Link](https://stackblitz.com/edit/sveltekit-test-23m2oe?file=src%2FApp.svelte).
+This project features a "Contacts Display" page that fetches data from the provided API and presents it in a user-friendly format. The project is hosted on StackBlitz
 
 ## Features
 
@@ -18,6 +18,7 @@ This project features a "Contacts Display" page that fetches data from the provi
 
 1. Clone or download this repository.
 2. Navigate to the project folder and install dependencies using either npm or pnpm:
+
    ```
    npm install
    ```
@@ -25,7 +26,8 @@ This project features a "Contacts Display" page that fetches data from the provi
    ```
    pnpm install
    ```
-3. Run the development server:
+4. Run the development server:
+   
    ```
    npm run dev
    ```
@@ -33,7 +35,7 @@ This project features a "Contacts Display" page that fetches data from the provi
    ```
    pnpm run dev
    ```
-4. Access the app through your browser at the provided local server address.
+6. Access the app through your browser at the provided local server address.
 
 Feel free to explore the code and the implemented features. If you have any questions or feedback, please don't hesitate to reach out.
 
