@@ -1,3 +1,4 @@
+<!-- DetailsPage.svelte -->
 <script lang="ts">
   import { onMount } from "svelte";
   import { getContacts } from "../services/storage";
@@ -12,7 +13,8 @@
     phone: number;
   }
 
-  let contactId: number;
+  export let contactId: number;
+
   let contact: Contact | undefined;
 
   onMount(() => {

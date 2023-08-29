@@ -32,18 +32,9 @@
   }
 </script>
 
-{#if isEditing}
-  <div class="card">
-    <input bind:value={editedData.name} />
-    <input bind:value={editedData.country} />
-    <button on:click={saveChanges}>Save</button>
-    <button on:click={toggleEdit}>Cancel</button>
-  </div>
-{:else}
-  <div class="card">
-    <h3>{contact.name}</h3>
-    <p>{contact.country}</p>
-    <button on:click={toggleEdit}>Edit</button>
-    <button on:click={deleteThisContact}>Delete</button>
-  </div>
-{/if}
+<div class="contact-details">
+  <h2>{contact.name}</h2>
+  <p>Address: {contact.address}</p>
+  <p>Country: {contact.country}</p>
+  <p>Phone: {contact.phone}</p>
+</div>

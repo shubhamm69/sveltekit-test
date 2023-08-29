@@ -7,13 +7,16 @@
     country: string;
     phone: number;
   }
+  import { Link } from 'svelte-routing';
   export let contact: Contact;
 </script>
 
-<div class="card">
-  <h3>{contact.name}</h3>
-  <p>{contact.country}</p>
-</div>
+<Link to={`/details/${contact.id}`}>
+  <div class="card">
+    <h3>{contact.name}</h3>
+    <p>{contact.country}</p>
+  </div>
+</Link>
 
 <style>
   .card {

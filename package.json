@@ -19,6 +19,7 @@
     "vite": "^4.4.9"
   },
   "dependencies": {
+    "pnpm": "^8.7.0",
     "svelte-routing": "^2.1.0"
   }
 }
