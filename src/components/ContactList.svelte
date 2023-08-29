@@ -12,7 +12,6 @@
     address: string;
     country: string;
     phone: number;
-    // Add other properties as needed
   }
 
   fetchContacts().then((data) => {
@@ -26,3 +25,12 @@
     <Card {contact} />
   {/each}
 </div>
+
+<style>
+  .contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+</style>

@@ -20,11 +20,13 @@
 
 <style>
   .card {
-    border: 1px solid #ccc;
+    margin: 10px;
     padding: 15px;
+    border: 1px solid #ccc;
     background-color: #f5f5f5;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
   }
 
   h3 {
@@ -36,5 +38,10 @@
   p {
     margin: 10px 0;
     color: #666;
+  }
+
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   }
 </style>
